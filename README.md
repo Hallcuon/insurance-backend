@@ -12,7 +12,7 @@
 
 ## 🛠 Використані технології
 
-- Python 3.12
+- Python 3.12 (Для Linux - Python 3.10)
 - Django 5.x
 - Django REST Framework
 - PostgreSQL
