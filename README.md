@@ -49,7 +49,7 @@ pip install -r requirements.txt
 
 4. Налаштуйте базу даних PostgreSQL у settings.py.
 
-'''
+```
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -60,7 +60,7 @@ DATABASES = {
         'PORT': '5432',
     }
 }
-'''
+```
 
 6. Виконайте міграції:
 
