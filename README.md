@@ -36,7 +36,7 @@ python -m venv venv
 source venv/bin/activate   # Linux / Mac
 venv\Scripts\activate      # Windows
 ```
-- - - ЯКЩО СКРИПТ НЕ ЗАПУСКАЄТЬСЯ - ПОТРІБНО ЗНЯТИ ОБМЕЖЕННЯ ВИКОНАННЯ СКРИПТІВ В PowerShell - - -
+- - - ЯКЩО СКРИПТ НЕ ЗАПУСКАЄТЬСЯ - ПОТРІБНО ЗНЯТИ ОБМЕЖЕННЯ ВИКОНАННЯ СКРИПТІВ В PowerShell
 ```
 Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
 ```
