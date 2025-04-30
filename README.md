@@ -25,7 +25,7 @@
 1. Клонуйте репозиторій:
 
 ```bash
-git clone https://github.com/ТвійUsername/insurance-backend.git
+git clone https://github.com/Hallcuon/insurance-backend.git
 cd insurance-backend
 ```
 
