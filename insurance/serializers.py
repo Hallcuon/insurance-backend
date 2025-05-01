@@ -1,5 +1,6 @@
 from rest_framework import serializers
 from .models import User, InsurancePolicy
+import re
 
 # Схема серіалізації для користувача
 class UserSerializer(serializers.ModelSerializer):
@@ -21,5 +22,16 @@ class InsurancePolicySerializer(serializers.ModelSerializer):
         model = InsurancePolicy
         fields = '__all__'
         extra_kwargs = {
-            'client': {'read_only': True}  #зробити поле клієнта лише для читання
+            'client': {'read_only': True}
         }
+    
+    def validate_vehicle_number(self, value):
+        pattern = r'^[А-ЯA-Z]{2}\d{4}[А-ЯA-Z]{2}$'
+        if not re.match(pattern, value):
+            raise serializers.ValidationError("Невірний формат номерного знаку. Має бути типу 'AA1234BB'.")
+        return value
+    
+    def validate(self, data):
+        if data['end_date'] <= data['start_date']:
+            raise serializers.ValidationError("Дата завершення має бути пізнішою за дату початку.")
+        return data

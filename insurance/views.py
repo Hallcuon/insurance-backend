@@ -23,3 +23,4 @@ class InsurancePolicyView(generics.ListCreateAPIView):
     
     def perform_create(self, serializer):
         serializer.save(client=self.request.user)
+
