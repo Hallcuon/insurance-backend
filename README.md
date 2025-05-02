@@ -87,7 +87,7 @@ python manage.py runserver
 ## 🌐 Фронтенд
 
 Фронтенд знаходиться в окремому репозиторії:  
-👉 https://github.com/твій-нік/insurance-frontend
+👉 https://github.com/Hallcuon/insurance-frontend
 
 Він автоматично підключається до API http://localhost:8000/api/
 
