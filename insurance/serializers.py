@@ -32,6 +32,6 @@ class InsurancePolicySerializer(serializers.ModelSerializer):
         return value
     
     def validate(self, data):
-        if data['end_date'] <= data['start_date']:
+        if data['start_date'] > data['end_date']:
             raise serializers.ValidationError("Дата завершення має бути пізнішою за дату початку.")
         return data
